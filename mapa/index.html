@@ -3,38 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Interaktywna mapa</title>
+  <title>Mapa smaków</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="wrap">
-  <h1>Mapa regionów</h1>
+  <h1>Mapa smaków</h1>
 
   <div class="stage" id="stage">
     <img
       id="mainMap"
-      src="img/mapa.png"
-      alt="Mapa"
-      usemap="#gminy"
+      src="img/mapa-smakow.png"
+      alt="Mapa smaków"
+      usemap="#image-map"
       width="1920"
       height="1080"
     />
 
-    <!-- dymek z grafiką info -->
     <div id="tooltip" class="tooltip" aria-hidden="true">
       <img id="tooltipImg" src="" alt="" />
     </div>
   </div>
 
-  <!-- TU WKLEJASZ <map> WYGENEROWANE Z IMAGE-MAP.NET -->
-  <map name="gminy" id="gminy">
-    <!-- przykład:
-    <area shape="poly" data-key="kaszyce" coords="..." href="#" alt="Kaszyce">
-    -->
-  </map>
-</div>
+  <map name="image-map" id="image-map">
+    <area alt="Kaszyce" title="Kaszyce" href="#" data-key="kaszyce"
+      coords="400,180,590,182,587,240,404,240" shape="poly">
 
-<script src="app.js"></script>
-</body>
-</html>
+    <area alt="Ciemięrzowice" title="Ciemięrzowice" href="#" data-key="ciemiierzowice"
+      coords="244,274,436,299,427,340,243,313" shape="poly">
+
+    <area alt="Olszynka" title="Olszynka" href="#" data-key="olszynka"
+      coords="" shape="poly">
+
+    <area alt="Wacławice" title="Wacławice" href="#" data-key="waclawice"
+      coords="" shape="poly">
+
+    <area alt="Trójczyce" title="Trójczyce" href="#" data-key="trojczyce"
+      coords="" shape="poly">
+
+    <area alt="Hnatkowice" title="Hnatkowice" href="#" data-key="hnatkowice"
+      coords="" shape="poly">
+
+    <area alt="Drohojów" title="Drohojów" href="#" data-key="drohojow"
+      coords="" shape="poly">
+
+    <area alt="Orły" title="Orły" href="#" data-key="orly"
+      coords="" shape="poly">
+
+    <area alt="Zadąbrowie" title="Zadąbrowie" href="#" data-key="zad
