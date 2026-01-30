@@ -1,0 +1,49 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 24px; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+h1 { margin: 0 0 16px; }
+
+.map {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* niewidoczny obszar klikalny/hover */
+.hotspot {
+  position: absolute;
+  /* dla testów możesz odkomentować obramowanie */
+  /* outline: 2px dashed red; */
+}
+
+/* grafika-info */
+.popup {
+  position: absolute;
+  left: 110%;
+  top: 0;
+  width: 260px;
+  max-width: 60vw;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* pokazuj popup na hover */
+.hotspot:hover .popup {
+  display: block;
+}
+
+/* PRZYKŁADOWE POZYCJE (musisz dopasować) */
+.hs1 { left: 20%; top: 30%; width: 10%; height: 12%; }
+.hs2 { left: 55%; top: 50%; width: 12%; height: 14%; }
+
+/* na telefonie hover nie działa idealnie, więc pokażemy po tapnięciu (fallback: zawsze) */
+@media (max-width: 900px) {
+  .hotspot:hover .popup { display: none; }
+  .hotspot .popup { display: block; position: static; width: 100%; margin-top: 8px; }
+  .hotspot { position: static; margin: 12px 0; }
+}
