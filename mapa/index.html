@@ -9,23 +9,32 @@
 <body>
 
 <div class="wrap">
-  <h1>Interaktywna mapa</h1>
+  <h1>Mapa regionów</h1>
 
-  <div class="map">
-    <img class="map-img" src="img/mapa.png" alt="Mapa" />
+  <div class="stage" id="stage">
+    <img
+      id="mainMap"
+      src="img/mapa.png"
+      alt="Mapa"
+      usemap="#gminy"
+      width="1920"
+      height="1080"
+    />
 
-    <!-- HOTSPOT 1 -->
-    <div class="hotspot hs1">
-      <img class="popup" src="img/info1.png" alt="Info 1" />
+    <!-- dymek z grafiką info -->
+    <div id="tooltip" class="tooltip" aria-hidden="true">
+      <img id="tooltipImg" src="" alt="" />
     </div>
-
-    <!-- HOTSPOT 2 -->
-    <div class="hotspot hs2">
-      <img class="popup" src="img/info2.png" alt="Info 2" />
-    </div>
-
   </div>
+
+  <!-- TU WKLEJASZ <map> WYGENEROWANE Z IMAGE-MAP.NET -->
+  <map name="gminy" id="gminy">
+    <!-- przykład:
+    <area shape="poly" data-key="kaszyce" coords="..." href="#" alt="Kaszyce">
+    -->
+  </map>
 </div>
 
+<script src="app.js"></script>
 </body>
 </html>
